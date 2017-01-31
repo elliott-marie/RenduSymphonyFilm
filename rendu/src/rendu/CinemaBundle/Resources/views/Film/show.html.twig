@@ -1,11 +1,18 @@
 {# src\rendu\CinemaBundle\Resources\views\Film\show.html.twig #}
+{% extends 'renduCinemaBundle::layout.html.twig' %}
+
+{% block title %}{{ film.titre }}{% endblock %}
+
+{% block body %}
+
 <h1>{{ film.titre }}</h1>
 
-<span>Réalisé par {{ film.realisateur }}</span>
-
 <h2>{{ film.genre }}</h2>
+
+<span><strong>Réalisé par {{ film.realisateur }}</strong></span>
 
 <p>{{ film.synopsis }}</p>
 
 <span>{{ film.dateSortie | date('d/m/Y') }}</span>
 
+{% endblock %}

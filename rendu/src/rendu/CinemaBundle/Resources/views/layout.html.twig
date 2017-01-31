@@ -1,0 +1,19 @@
+{# src/rendu/CinemaBundle/Resources/views/layout.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bibliothèque de Film{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('html_cinema/css/style.css') }}" />
+</head>
+<body>
+<ul class="menu">
+    <li><a href="{{ path('page_accueil') }}">Accueil</a></li>
+    <li><a href="{{ path('page_films') }}">Films</a></li>
+</ul>
+
+<div id="content">
+    {% block body %}{% endblock %}
+</div>
+</body>
+</html>
