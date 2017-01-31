@@ -1,0 +1,11 @@
+{# src\rendu\CinemaBundle\Resources\views\Film\show.html.twig #}
+<h1>{{ film.titre }}</h1>
+
+<span>Réalisé par {{ film.realisateur }}</span>
+
+<h2>{{ film.genre }}</h2>
+
+<p>{{ film.synopsis }}</p>
+
+<span>{{ film.dateSortie | date('d/m/Y') }}</span>
+

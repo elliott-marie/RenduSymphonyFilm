@@ -36,9 +36,9 @@ class Film
     private $synopsis;
 
     /**
-     * @var \DateTime
+     * @var \Date
      *
-     * @ORM\Column(name="date_sortie", type="datetime")
+     * @ORM\Column(name="date_sortie", type="date")
      */
     private $dateSortie;
 
@@ -132,7 +132,7 @@ class Film
     /**
      * Get dateSortie
      *
-     * @return \DateTime
+     * @return \Date
      */
     public function getDateSortie()
     {
