@@ -42,6 +42,13 @@ class Personne
      */
     private $dateNaissance;
 
+    /**
+     * @var text
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
 
     /**
      * Get id
@@ -123,6 +130,30 @@ class Personne
     public function getDateNaissance()
     {
         return $this->dateNaissance;
+    }
+
+    /**
+     * Set description
+     *
+     * @param text $description
+     *
+     * @return Personne
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return text
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }
 
