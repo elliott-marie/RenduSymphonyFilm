@@ -155,5 +155,9 @@ class Personne
     {
         return $this->description;
     }
+
+    public function __toString(){
+        return $this->prenom.' '.$this->nom;
+    }
 }
 

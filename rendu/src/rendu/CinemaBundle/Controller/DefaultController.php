@@ -71,4 +71,19 @@ class DefaultController extends Controller
         );
     }
 
+    /**
+     * @Route("/realisateur-films/{id}", requirements={"id": "\d+"}, name="page_realisateur-films")
+     */
+    public function listActionCombi($id)
+    {
+        $film = $this->getDoctrine()->getRepository('renduCinemaBundle:Film')->findByRealisateur($id);
+
+        $titre_de_la_page = 'Les films de';
+
+        return $this->render(
+            'renduCinemaBundle:combinaison:ReaFilm.html.twig',
+            ['film' => $film, 'titre' => $titre_de_la_page]
+        );
+    }
+
 }

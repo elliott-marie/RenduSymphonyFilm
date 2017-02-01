@@ -1,0 +1,48 @@
+{# src\rendu\CinemaBundle\Resources\views\combinaison\ReaFilm.html.twig #}
+{% extends 'renduCinemaBundle::layout.html.twig' %}
+
+{% block title %}Les films réalisés par{% endblock %}
+
+{% block body %}
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Cinéma</p>
+                <div class="list-group">
+                    <a href="{{ path('page_films') }}" class="list-group-item active">Films</a>
+                    <a href="{{ path('page_realisateurs') }}" class="list-group-item">Réalisateurs</a>
+                </div>
+            </div>
+
+
+            <br />
+            <div class="col-md-9">
+
+                {% for film in film %}
+
+                    <h1> {{ titre|upper }} </h1>
+
+
+                    <div class="thumbnail">
+                        <div class="caption-full">
+                            <h4 class="pull-right">{{ film.genre }}</h4>
+                            <h4>{{ film.titre }}</h4>
+                            <p>{{ film.synopsis }}</p>
+                        </div>
+                        <div class="ratings">
+                            <p class="pull-right">{{ film.dateSortie | date('d/m/Y') }}</p>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

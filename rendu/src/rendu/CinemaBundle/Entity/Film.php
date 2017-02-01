@@ -43,16 +43,16 @@ class Film
     private $dateSortie;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="realisateur", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Personne", inversedBy="films")
      */
     private $realisateur;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="genre", type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="Genre", inversedBy="films")
      */
     private $genre;
 
@@ -142,7 +142,7 @@ class Film
     /**
      * Set realisateur
      *
-     * @param string $realisateur
+     * @param int $realisateur
      *
      * @return Film
      */
@@ -156,7 +156,7 @@ class Film
     /**
      * Get realisateur
      *
-     * @return string
+     * @return int
      */
     public function getRealisateur()
     {
@@ -166,7 +166,7 @@ class Film
     /**
      * Set genre
      *
-     * @param string $genre
+     * @param int $genre
      *
      * @return Film
      */
@@ -180,11 +180,13 @@ class Film
     /**
      * Get genre
      *
-     * @return string
+     * @return int
      */
     public function getGenre()
     {
         return $this->genre;
     }
+
+
 }
 

@@ -25,12 +25,12 @@
         <div class="well">
         <div class="row">
             <div class="col-md-12">
-                <strong>{{ realisateur.prenom }} {{ realisateur.nom }}</strong> date naissance <br />
+                <strong>{{ realisateur.prenom }} {{ realisateur.nom }}</strong> ({{ 2017 - realisateur.dateNaissance|date('Y') }} ans)
                 <br />
                     {{ realisateur.description }}
                 <hr />
                 <div class="text-right">
-                    <a href="cinema-films-realisateur.html" class="btn btn-success">Voir ses films</a>
+                    <a href="{{ path('page_realisateur-films', {'id':realisateur.id}) }}" class="btn btn-success">Voir ses films</a>
                 </div>
             </div>
         </div>
