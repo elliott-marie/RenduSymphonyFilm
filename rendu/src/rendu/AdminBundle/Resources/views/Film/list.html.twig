@@ -1,0 +1,38 @@
+{# src\rendu\CinemaBundle\Resources\views\Film\list.html.twig #}
+{% extends 'renduCinemaBundle::layout.html.twig' %}
+
+{% block title %}Liste des films{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <p class="lead">Admin Cinéma</p>
+            <div class="list-group">
+                <a href="{{ path('admin_film_liste') }}" class="list-group-item active">Films</a>
+                <a href="{{ path('admin_genre_liste') }}" class="list-group-item">Genre</a>
+                <a href="{{ path('admin_realisateur_liste') }}" class="list-group-item">Realisateurs</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+    <br />
+
+<h1>Liste des Films :</h1>
+<ul>
+    {% for film in films %}
+        <li>
+            <a href="{{ path('admin_film_modif', {'id': film.id}) }}">{{ film.titre }}</a>
+            <a href="{{ path('admin_film_supprimer', {'id': film.id}) }}">(x)</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{{ path('admin_film_ajout') }}">Ajouter</a>
+
+{% endblock %}

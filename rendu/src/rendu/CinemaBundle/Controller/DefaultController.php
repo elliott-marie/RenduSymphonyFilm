@@ -22,6 +22,7 @@ class DefaultController extends Controller
     {
         $films = $this->getDoctrine()->getRepository('renduCinemaBundle:Film')->findAll();
 
+
         $titre_de_la_page = 'Tous les films !';
 
         return $this->render(
@@ -72,8 +73,8 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/realisateur-films/{id}", requirements={"id": "\d+"}, name="page_realisateur-films")
-     */
+ * @Route("/realisateur-films/{id}", requirements={"id": "\d+"}, name="page_realisateur-films")
+ */
     public function listActionCombi($id)
     {
         $film = $this->getDoctrine()->getRepository('renduCinemaBundle:Film')->findByRealisateur($id);

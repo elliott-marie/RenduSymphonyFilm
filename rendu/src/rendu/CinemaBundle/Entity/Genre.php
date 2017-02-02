@@ -66,5 +66,7 @@ class Genre
     public function __toString(){
         return $this->nom;
     }
+
+
 }
 

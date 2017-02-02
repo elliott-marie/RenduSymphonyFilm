@@ -1,7 +1,7 @@
 {# src\rendu\CinemaBundle\Resources\views\Film\list.html.twig #}
 {% extends 'renduCinemaBundle::layout.html.twig' %}
 
-{% block title %}Liste des livres{% endblock %}
+{% block title %}Liste des films{% endblock %}
 
 {% block body %}
 
@@ -25,6 +25,8 @@
 
         {% for film in films %}
 
+
+
             <div class="thumbnail">
                 <div class="caption-full">
                     <h4 class="pull-right">{{ film.genre }}</h4>
@@ -38,6 +40,7 @@
 
                 </div>
             </div>
+
 
     {% endfor %}
 

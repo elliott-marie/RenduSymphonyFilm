@@ -1,3 +1,8 @@
+rendu_admin:
+    resource: "@renduAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 rendu_cinema:
     resource: "@renduCinemaBundle/Controller/"
     type:     annotation
