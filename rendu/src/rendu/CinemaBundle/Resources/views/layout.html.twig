@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <title>{% block title %}Bibliothèque de Film{% endblock %}</title>
     <!-- Bootstrap Core CSS -->
-    <link href="html_cinema/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{  asset('html_cinema/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('html_cinema/css/style.css') }}" />
 
 </head>
 <body>
 <ul class="menu">
     <li><a href="{{ path('page_accueil') }}">Accueil</a></li>
+    <li><a href="#">Bibliothèque</a></li>
     <li><a href="{{ path('page_films') }}">Films</a></li>
     <li><a href="{{ path('admin_film_liste') }}">Admin</a></li>
 </ul>

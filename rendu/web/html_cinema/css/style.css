@@ -22,3 +22,7 @@ ul.menu li a {
 ul.menu li a:hover {
     background-color: #111;
 }
+
+footer{
+    margin-top:80vh;
+}
