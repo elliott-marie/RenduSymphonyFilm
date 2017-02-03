@@ -6,7 +6,9 @@
     <title>{% block title %}Bibliothèque de Film{% endblock %}</title>
     <!-- Bootstrap Core CSS -->
     <link href="html_cinema/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('html_cinema/css/style.css') }}" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('html_cinema/css/admin.css') }}" />
 
 </head>
 <body>
@@ -18,8 +20,42 @@
 
 <div id="content">
 
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Administration Cinéma</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Que voulez-vous administrer ?<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('admin_film_liste') }}">Films</a></li>
+                            <li><a href="{{ path('admin_genre_liste') }}">Genre</a></li>
+                            <li><a href="{{ path('admin_realisateur_liste') }}">Realisateurs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        </nav>
+
+
+        </div>
+
+    </div>
+
+
     {% block body %}{% endblock %}
 
 </div>
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')}}"></script>
+
 </body>
 </html>

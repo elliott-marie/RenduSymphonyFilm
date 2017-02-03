@@ -77,13 +77,13 @@ class DefaultController extends Controller
  */
     public function listActionCombi($id)
     {
-        $film = $this->getDoctrine()->getRepository('renduCinemaBundle:Film')->findByRealisateur($id);
+        $films = $this->getDoctrine()->getRepository('renduCinemaBundle:Film')->findByRealisateur($id);
 
-        $titre_de_la_page = 'Les films de';
+        $titre_de_la_page = 'Les films de ';
 
         return $this->render(
             'renduCinemaBundle:combinaison:ReaFilm.html.twig',
-            ['film' => $film, 'titre' => $titre_de_la_page]
+            ['films' => $films, 'titre' => $titre_de_la_page]
         );
     }
 

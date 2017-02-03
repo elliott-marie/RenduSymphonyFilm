@@ -1,7 +1,6 @@
 {# src\rendu\CinemaBundle\Resources\views\combinaison\ReaFilm.html.twig #}
 {% extends 'renduCinemaBundle::layout.html.twig' %}
 
-{% block title %}Les films réalisés par{% endblock %}
 
 {% block body %}
 
@@ -22,10 +21,9 @@
             <br />
             <div class="col-md-9">
 
-                {% for film in film %}
+                {% for film in films %}
 
-                    <h1> {{ titre|upper }} </h1>
-
+                        <h1> {{ film.realisateur }}</h1>
 
                     <div class="thumbnail">
                         <div class="caption-full">
@@ -35,6 +33,9 @@
                         </div>
                         <div class="ratings">
                             <p class="pull-right">{{ film.dateSortie | date('d/m/Y') }}</p>
+
+                            <p>Réalisé par : <a href="{{ path('page_realisateurs') }}">{{ film.realisateur }}</a></p>
+<hr>
                         </div>
                     </div>
 
